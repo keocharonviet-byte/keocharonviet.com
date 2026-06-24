@@ -1,12 +1,114 @@
 <!DOCTYPE html>
-<html>
+<html lang="vi">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Keo Chà Ron Việt</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    line-height:1.6;
+}
+
+header{
+    background:#0d6efd;
+    color:white;
+    text-align:center;
+    padding:60px 20px;
+}
+
+section{
+    max-width:1200px;
+    margin:auto;
+    padding:40px 20px;
+}
+
+.products{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    border:1px solid #ddd;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+.card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+.card h3{
+    padding:10px;
+}
+
+.card p{
+    padding:0 10px 15px;
+}
+
+.contact{
+    background:#f5f5f5;
+    text-align:center;
+    padding:40px;
+}
+
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+</style>
 </head>
+
 <body>
-<h1>Keo Chà Ron Việt</h1>
-<p>Hotline: 0905 565 586</p>
-<p>Địa chỉ: 140 Bùi Tấn Diên, Hòa Khánh, Đà Nẵng</p>
+
+<header>
+    <h1>KEO CHÀ RON VIỆT</h1>
+    <p>Chuyên cung cấp keo chà ron cao cấp</p>
+</header>
+
+<section>
+    <h2>Sản phẩm nổi bật</h2>
+
+    <div class="products">
+
+        <div class="card">
+            <img src="images/sp1.jpg">
+            <h3>Keo Chà Ron Cao Cấp</h3>
+            <p>Chống thấm, chống nấm mốc, bền màu.</p>
+        </div>
+
+        <div class="card">
+            <img src="images/sp2.jpg">
+            <h3>Keo Chà Ron Epoxy</h3>
+            <p>Độ bền cao, phù hợp mọi công trình.</p>
+        </div>
+
+        <div class="card">
+            <img src="images/sp3.jpg">
+            <h3>Keo Chà Ron Kháng Khuẩn</h3>
+            <p>Dễ vệ sinh, tuổi thọ lâu dài.</p>
+        </div>
+
+    </div>
+</section>
+
+<section class="contact">
+    <h2>Liên hệ</h2>
+    <p>📞 Hotline: 0905 565 586</p>
+    <p>📍 140 Bùi Tấn Diên, Hòa Khánh, Đà Nẵng</p>
+</section>
+
+<footer>
+    © 2025 Keo Chà Ron Việt
+</footer>
+
 </body>
 </html>
