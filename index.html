@@ -1,114 +1,529 @@
+```html
 <!DOCTYPE html>
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Keo Chà Ron Việt</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>KEO CHÀ RON VIỆT</title>
 
 <style>
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial}
+html{scroll-behavior:smooth}
+
 body{
-    margin:0;
-    font-family:Arial,sans-serif;
-    line-height:1.6;
+background:#f6f7f9;
+color:#222
 }
 
-header{
-    background:#0d6efd;
-    color:white;
-    text-align:center;
-    padding:60px 20px;
+.top{
+background:#111;
+color:#fff;
+padding:12px 7%;
+display:flex;
+justify-content:space-between
 }
 
-section{
-    max-width:1200px;
-    margin:auto;
-    padding:40px 20px;
+.header{
+background:#fff;
+padding:22px 7%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 2px 18px rgba(0,0,0,.08);
+position:sticky;
+top:0
 }
 
-.products{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
+.logo{
+font-size:34px;
+font-weight:800;
+color:#d8a20d
+}
+
+.menu a{
+margin-left:28px;
+text-decoration:none;
+color:#333;
+font-weight:700
+}
+
+.hero{
+height:88vh;
+
+background:
+linear-gradient(
+rgba(0,0,0,.45),
+rgba(0,0,0,.45)
+),
+url(images/banner.jpg);
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+align-items:center;
+
+padding:7%;
+
+color:white
+}
+
+.hero h1{
+font-size:72px;
+max-width:720px
+}
+
+.hero p{
+margin-top:20px;
+font-size:22px
+}
+
+.btn{
+display:inline-block;
+
+margin-top:40px;
+
+padding:18px 40px;
+
+background:#d8a20d;
+
+color:white;
+
+text-decoration:none;
+
+border-radius:50px
+}
+
+.wrap{
+padding:90px 7%
+}
+
+.title{
+font-size:42px;
+margin-bottom:40px
+}
+
+.grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(
+auto-fit,
+minmax(320px,1fr)
+);
+
+gap:30px
+
 }
 
 .card{
-    border:1px solid #ddd;
-    border-radius:10px;
-    overflow:hidden;
-    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+
+background:white;
+
+border-radius:20px;
+
+overflow:hidden;
+
+box-shadow:
+0 8px 30px
+rgba(0,0,0,.08)
+
 }
 
 .card img{
-    width:100%;
-    height:250px;
-    object-fit:cover;
+
+width:100%;
+
+height:300px;
+
+object-fit:cover
+
 }
 
-.card h3{
-    padding:10px;
+.box{
+
+padding:30px
+
 }
 
-.card p{
-    padding:0 10px 15px;
+.box h3{
+
+margin-bottom:10px
+
+}
+
+.box p{
+
+color:#666
+
+}
+
+.box button{
+
+margin-top:20px;
+
+width:100%;
+
+padding:16px;
+
+background:#d8a20d;
+
+border:0;
+
+color:white;
+
+cursor:pointer
+
+}
+
+.dark{
+
+background:#111;
+
+color:white;
+
+text-align:center
+
+}
+
+.dark h2{
+
+margin-bottom:25px
+
+}
+
+.dark ul{
+
+line-height:2
+
+}
+
+.project{
+
+width:100%;
+
+border-radius:20px
+
 }
 
 .contact{
-    background:#f5f5f5;
-    text-align:center;
-    padding:40px;
+
+background:white;
+
+padding:40px;
+
+border-radius:24px
+
 }
 
-footer{
-    background:#222;
-    color:white;
-    text-align:center;
-    padding:20px;
+input,
+textarea{
+
+width:100%;
+
+padding:18px;
+
+margin-bottom:15px;
+
+border:1px solid #ddd;
+
+border-radius:10px
+
 }
+
+.send{
+
+width:100%;
+
+padding:18px;
+
+border:0;
+
+background:#d8a20d;
+
+color:white
+
+}
+
+.footer{
+
+background:black;
+
+color:white;
+
+padding:60px;
+
+text-align:center
+
+}
+
+@media(max-width:800px){
+
+.top{
+display:block;
+text-align:center
+}
+
+.header{
+display:block;
+text-align:center
+}
+
+.hero h1{
+font-size:42px
+}
+
+.menu{
+margin-top:20px
+}
+
+.menu a{
+display:block;
+margin:10px
+}
+
+}
+
 </style>
 </head>
 
 <body>
 
-<header>
-    <h1>KEO CHÀ RON VIỆT</h1>
-    <p>Chuyên cung cấp keo chà ron cao cấp</p>
+<div class="top">
+
+<div>
+📍 140 BÙI TẤN DIÊN • HÒA KHÁNH • ĐÀ NẴNG
+</div>
+
+<div>
+☎ 0905 565 586
+</div>
+
+</div>
+
+<header class="header">
+
+<div class="logo">
+
+KEO CHÀ RON VIỆT
+
+</div>
+
+<nav class="menu">
+
+<a href="#sp">SẢN PHẨM</a>
+
+<a href="#ct">CÔNG TRÌNH</a>
+
+<a href="#lh">LIÊN HỆ</a>
+
+</nav>
+
 </header>
 
-<section>
-    <h2>Sản phẩm nổi bật</h2>
+<section class="hero">
 
-    <div class="products">
+<div>
 
-        <div class="card">
-            <img src="images/sp1.jpg">
-            <h3>Keo Chà Ron Cao Cấp</h3>
-            <p>Chống thấm, chống nấm mốc, bền màu.</p>
-        </div>
+<h1>
 
-        <div class="card">
-            <img src="images/sp2.jpg">
-            <h3>Keo Chà Ron Epoxy</h3>
-            <p>Độ bền cao, phù hợp mọi công trình.</p>
-        </div>
+KEO CHÀ RON
+CHUYÊN NGHIỆP
+CHO MỌI CÔNG TRÌNH
 
-        <div class="card">
-            <img src="images/sp3.jpg">
-            <h3>Keo Chà Ron Kháng Khuẩn</h3>
-            <p>Dễ vệ sinh, tuổi thọ lâu dài.</p>
-        </div>
+</h1>
 
-    </div>
+<p>
+
+Keo chà ron • Keo dán gạch • Chống thấm
+
+</p>
+
+<a class="btn"
+href="#sp">
+
+XEM SẢN PHẨM
+
+</a>
+
+</div>
+
 </section>
 
-<section class="contact">
-    <h2>Liên hệ</h2>
-    <p>📞 Hotline: 0905 565 586</p>
-    <p>📍 140 Bùi Tấn Diên, Hòa Khánh, Đà Nẵng</p>
+<section
+class="wrap"
+id="sp">
+
+<div class="title">
+
+SẢN PHẨM NỔI BẬT
+
+</div>
+
+<div class="grid">
+
+<div class="card">
+
+<img src="images/p1.jpg">
+
+<div class="box">
+
+<h3>
+KEO CHÀ RON EPOXY
+</h3>
+
+<p>
+Không ố màu • Chống thấm
+</p>
+
+<button>
+XEM CHI TIẾT
+</button>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="images/p2.jpg">
+
+<div class="box">
+
+<h3>
+KEO DÁN GẠCH
+</h3>
+
+<p>
+Độ bám dính cao
+</p>
+
+<button>
+XEM CHI TIẾT
+</button>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="images/p3.jpg">
+
+<div class="box">
+
+<h3>
+CHỐNG THẤM
+</h3>
+
+<p>
+Bảo vệ công trình
+</p>
+
+<button>
+XEM CHI TIẾT
+</button>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
 
-<footer>
-    © 2025 Keo Chà Ron Việt
+<section
+class="wrap dark">
+
+<h2>
+
+VÌ SAO CHỌN CHÚNG TÔI
+
+</h2>
+
+<ul>
+
+<li>✔ Sản phẩm chính hãng</li>
+
+<li>✔ Hỗ trợ kỹ thuật</li>
+
+<li>✔ Giao hàng toàn quốc</li>
+
+<li>✔ Tư vấn thi công</li>
+
+</ul>
+
+</section>
+
+<section
+class="wrap"
+id="ct">
+
+<div class="title">
+
+CÔNG TRÌNH THỰC TẾ
+
+</div>
+
+<img
+class="project"
+src="images/project.jpg">
+
+</section>
+
+<section
+class="wrap"
+id="lh">
+
+<div class="contact">
+
+<div class="title">
+
+NHẬN TƯ VẤN
+
+</div>
+
+<input placeholder="Họ tên">
+
+<input placeholder="Số điện thoại">
+
+<textarea
+placeholder="Nội dung">
+
+</textarea>
+
+<button
+class="send">
+
+GỬI THÔNG TIN
+
+</button>
+
+</div>
+
+</section>
+
+<footer
+class="footer">
+
+KEO CHÀ RON VIỆT
+
+<br><br>
+
+140 BÙI TẤN DIÊN
+
+<br>
+
+HÒA KHÁNH • ĐÀ NẴNG
+
+<br><br>
+
+0905 565 586
+
 </footer>
 
 </body>
 </html>
+```
